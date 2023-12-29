@@ -1,8 +1,175 @@
 body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
+  position: relative; /* Changed from absolute to relative */
+  margin: 0 auto;
   padding: 20px;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* HomePage.css */
+
+.banner-container {
+  background-image: url('banner.png'); /* Replace with the path to your banner image */
+  background-size: 1200px 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding: 50px 20px; /* Adjust the padding as needed */
+}
+
+.banner-container:hover {
+  cursor: pointer;
+}
+
+#home-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px; /* Added padding on the sides */
+}
+
+#home-page-title {
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  font-size: x-large;
+}
+
+#detail-page-title {
+  text-align: center;
+  color: black;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  font-size: x-large;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+.city-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns in the grid */
+  gap: 30px; /* Adjust the gap between city cards */
+  justify-content: center; /* Center the grid */
+}
+
+.city-card {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.edit-card {
+  width: 40%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.city-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.city-details {
+  padding: 15px;
+}
+
+.city-name {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.link-text {
+  color: black;
+  text-decoration: none;
+}
+
+.city-link {
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.destination-form {
+  width: 100%;
+  background-image: url('island.png'); /* Replace with the path to your banner image */
+  background-size: 1200px 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(187, 219, 215);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  align-self: center;
+}
+
+.destination-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 2rem 1.5rem;
+  background-color: rgb(128, 113, 70);
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: medium;
+  font-weight: bolder;
+  color: rgb(11, 10, 10);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(100, 122, 136, 0.459);
+  padding-left: 3px;
+}
+
+.form-input {
+  width: clamp(120px, 50vw, 420px);
+  height: 2.5rem;
+  padding: 0 0.5px;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 0.625rem auto;
+  transition: all 250ms;
+  @media (min-width: 768px) {
+    width: clamp(120px, 35vw, 420px);
+  }
+}
+
+button {
+  margin: 8px 3px;
+}
+
+.right {
+  float: right;
+}
+.submit {
+  display: inline-block;
+
+  padding: 8px 10px;
+  border: 0;
+  background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
+  border-radius: 3px;
+
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+  width: 10vw;
+}
+
+.submit:hover {
+  cursor: pointer;
 }
